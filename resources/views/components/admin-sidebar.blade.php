@@ -24,10 +24,10 @@
     </div>
 
     <div class="py-5 d-flex justify-content-center">
-        <button class="openbtn btn btn-lg d-none" onclick="openNav()" id="openSidebar" title="Open Sidebar">
+        <button class="btn btn-lg d-none" onclick="openNav()" id="openSidebar" title="Open Sidebar">
             <i class="fa-solid fa-circle-arrow-right fa-2xl text-light"></i>
         </button>
-        <button class="openbtn btn btn-lg" onclick="closeNav()" id="closeSidebar" title="Close Sidebar">
+        <button class="btn btn-lg" onclick="closeNav()" id="closeSidebar" title="Close Sidebar">
             <i class="fa-solid fa-circle-arrow-left fa-2xl text-light"></i>
         </button>
     </div>

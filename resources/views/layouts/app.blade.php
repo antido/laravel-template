@@ -29,11 +29,17 @@
     <div id="app">
         @include('partials.navbar')
 
+        {{-- @if(Auth::check() && Auth::user()->role === 'admin')
+            <x-admin-sidebar />
+        @endif --}}
+
         <main class="py-4">
             @include('partials.messages')
             
             @yield('content')
         </main>
+
+        @include('partials.footer')
     </div>
 </body>
 </html>

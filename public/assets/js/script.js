@@ -1,3 +1,4 @@
+// FUNCTION TO ENLARGE SIDEBAR //
 const openNav = () => {
     const openArrow = document.querySelector('#openSidebar');
     const closeArrow = document.querySelector('#closeSidebar');    
@@ -14,12 +15,14 @@ const openNav = () => {
     openArrow.classList.add('d-none');
     closeArrow.classList.remove('d-none');
 }
-  
+// END FUNCTION //
+
+// FUNCTION TO COLLAPSE SIDEBAR //
 const closeNav = () => {
     const openArrow = document.querySelector('#openSidebar');
     const closeArrow = document.querySelector('#closeSidebar');
 
-    // Sidebar Icon s
+    // Sidebar Icons
     let dashboardIcon = '<i class="fas fa-house" title="Dashboard"></i>';
     let profileIcon = '<i class="fas fa-user" title="Profile"></i>';
     let userManagementIcon = '<i class="fas fa-user-gear" title="User Management"></i>';
@@ -36,3 +39,4 @@ const closeNav = () => {
     openArrow.classList.remove('d-none');
     closeArrow.classList.add('d-none');
 }
+// END FUNCTION //

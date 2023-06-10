@@ -1,7 +1,5 @@
-#adminContainer {
-    /* background-color: #016630; */
-}
-  
+
+/* ----- SIDEBAR STYLE ----- */
 .sidebar {
     height: 100%;
     width: 250px;
@@ -45,23 +43,21 @@
     margin-left: 50px;
 }
   
-.openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 10px 15px;
-    border: none;
-}
-  
-.openbtn:hover {
-    background-color: #444;
-}
-  
 #main {
     transition: margin-left .5s;
     padding: 16px;
     margin-left: 250px;
 }
+/* ----- END SIDEBAR STYLE ----- */
+
+/* ----- FOOTER STYLE ----- */
+#siteFooter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+/* ----- END FOOTER STYLE ----- */
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
