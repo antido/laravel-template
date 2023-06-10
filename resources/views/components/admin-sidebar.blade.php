@@ -9,18 +9,27 @@
     <div class="sidebar-content">
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
-                <a href="{{ route('admin.dashboard') }}">Dashboard</a>
+                <a href="{{ route('admin.dashboard') }}" id="sidebarDashboard">Dashboard</a>
             </li>
             <li class="list-group-item">
-                <a href="#">Profile</a>
+                <a href="#" id="sidebarProfile">Profile</a>
             </li>
             <li class="list-group-item">
-                <a href="#">User Management</a>
+                <a href="#" id="sidebarUserManagement">User Management</a>
             </li>
             <li class="list-group-item">
-                <a href="#">Settings</a>
+                <a href="#" id="sidebarSetting">Settings</a>
             </li>
         </ul>
+    </div>
+
+    <div class="py-5 d-flex justify-content-center">
+        <button class="openbtn btn btn-lg d-none" onclick="openNav()" id="openSidebar" title="Open Sidebar">
+            <i class="fa-solid fa-circle-arrow-right fa-2xl text-light"></i>
+        </button>
+        <button class="openbtn btn btn-lg" onclick="closeNav()" id="closeSidebar" title="Close Sidebar">
+            <i class="fa-solid fa-circle-arrow-left fa-2xl text-light"></i>
+        </button>
     </div>
 </div>
 {{-- END SIDEBAR SECTION --}}
