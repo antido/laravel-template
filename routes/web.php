@@ -22,7 +22,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+// ---------- USER ROUTES ----------- //
+Route::group(['prefix' => 'user', 'middleware' => ['isUser', 'auth']], function() {
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
+});
 
 // ---------- ADMIN ROUTES ---------- //
 Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth']], function() {

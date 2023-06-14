@@ -26,7 +26,7 @@ const closeNav = () => {
     let dashboardIcon = '<i class="fas fa-house" title="Dashboard"></i>';
     let profileIcon = '<i class="fas fa-user" title="Profile"></i>';
     let userManagementIcon = '<i class="fas fa-user-gear" title="User Management"></i>';
-    let settingIcon = '<i class="fas fa-gear" title="Gear"></i>';
+    let settingIcon = '<i class="fas fa-gear" title="Setting"></i>';
 
     document.getElementById('sidebarDashboard').innerHTML = dashboardIcon;
     document.getElementById('sidebarProfile').innerHTML = profileIcon;
