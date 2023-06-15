@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CustomPageController;
+use App\Http\Controllers\GlobalController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -24,12 +26,20 @@ Auth::routes();
 
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+// ---------- GLOBAL ROUTES ---------- //
+Route::get('goback', [GlobalController::class, 'goBack'])->name('goback');
+
 // ---------- USER ROUTES ----------- //
 Route::group(['prefix' => 'user', 'middleware' => ['isUser', 'auth']], function() {
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
+    Route::get('dashboard', [HomeController::class, 'index'])->name('home');
 });
 
 // ---------- ADMIN ROUTES ---------- //
 Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth']], function() {
     Route::get('dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+});
+
+// ---------- CUSTOM PAGES ROUTES ---------- //
+Route::group(['prefix' => 'page', 'middleware' => ['auth']], function() {
+    Route::get('restricted', [CustomPageController::class, 'restricted'])->name('page.restricted');
 });

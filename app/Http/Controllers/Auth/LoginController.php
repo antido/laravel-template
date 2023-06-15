@@ -34,6 +34,8 @@ class LoginController extends Controller
             return route('home');
         } elseif (Auth()->user()->role === 'admin') {
             return route('admin.dashboard');
+        } else {
+            return route('page.restricted');
         }
     }
 

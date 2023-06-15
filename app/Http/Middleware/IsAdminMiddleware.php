@@ -19,7 +19,9 @@ class IsAdminMiddleware
         if (Auth::check() && Auth::user()->role === "admin") {
             return $next($request);
         } else {
-            return redirect()->route('login');
+            return redirect()->route('page.restricted');
+            // return redirect()->back();
+            // return redirect()->route('login');
         }
     }
 }
