@@ -16,7 +16,9 @@
 .sidebar ul {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    row-gap: 15px;
+    padding: 0 25px;
 }
 
 .sidebar ul li {
